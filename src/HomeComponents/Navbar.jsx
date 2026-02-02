@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-
+import { Link } from "react-router-dom";
 const Navbar = () => {
   const [open, setOpen] = useState(false);
 
@@ -23,9 +23,10 @@ const Navbar = () => {
 
         {/* Right (Desktop only) */}
         <div className="hidden md:flex gap-3">
+          <Link to='/login'>
           <button className="px-4 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50">
             Find Job
-          </button>
+          </button></Link>
           <button className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
             Post Job
           </button>
@@ -54,10 +55,11 @@ const Navbar = () => {
           </ul>
 
           <div className="flex flex-col gap-3">
-            <button className="w-full border border-blue-600 text-blue-600 py-2 rounded-lg">
-              Find Job
-            </button>
-            <button className="w-full bg-blue-600 text-white py-2 rounded-lg">
+            <Link to="/login">
+              <button className="w-full border border-blue-600 text-blue-600 py-2 rounded-lg">
+                Find Job
+              </button>
+            </Link><button className="w-full bg-blue-600 text-white py-2 rounded-lg">
               Post Job
             </button>
             <button className="w-full text-gray-600 py-2">

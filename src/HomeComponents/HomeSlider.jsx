@@ -5,7 +5,6 @@ import Navbar from './Navbar'
 const HomeSlider = () => {
   return (
     <>
-    <Navbar />
     <Hero/>
     <Footer/></>
   )
